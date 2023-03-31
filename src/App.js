@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import Navbar from './Navbar';
+import HomePage from './HomePage';
+import RegistrationForm from './RegistrationForm';
+import DreamInput from './DreamInput';
+import Dashboard from './Dashboard';
+import DreamAnalysis from './DreamAnalysis';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/register" element={<RegistrationForm />} />
+        <Route path="/dream-input" element={<DreamInput />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dream-analysis" element={<DreamAnalysis />} />
+      </Routes>
+    </Router>
   );
 }
 

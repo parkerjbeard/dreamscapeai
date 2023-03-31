@@ -1,0 +1,43 @@
+/* Dashboard.css */
+.dashboard-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 2rem;
+  }
+  
+  .profile-summary,
+  .recent-dreams,
+  .personalized-insights {
+	background-color: #f8f8f8;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	width: 100%;
+	max-width: 800px;
+  }
+  
+  .section-title {
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
+  }
+  
+  .recent-dreams-list,
+  .personalized-insights-list {
+	list-style-type: none;
+	padding: 0;
+  }
+  
+  .recent-dreams-list li,
+  .personalized-insights-list li {
+	padding: 0.5rem;
+	border-bottom: 1px solid #ddd;
+  }
+  
+  .recent-dreams-list li:last-child,
+  .personalized-insights-list li:last-child {
+	border-bottom: none;
+  }
+  
